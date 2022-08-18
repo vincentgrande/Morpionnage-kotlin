@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/tv_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aladin"
+        android:text="Paramètres"
+        android:textColor="@color/yellow"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gotomenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/darkgreen"
+        android:fontFamily="@font/aladin"
+        android:text="Retour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_old_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="Email"
+
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/darkgreen"
+        android:textColorHint="@color/darkgreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
+
+    <EditText
+        android:id="@+id/editText_old_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/darkgreen"
+        android:textColorHint="@color/darkgreen"
+        app:layout_constraintEnd_toEndOf="@+id/editText_old_email"
+        app:layout_constraintStart_toStartOf="@+id/editText_old_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_old_email" />
+
+    <EditText
+        android:id="@+id/editText_settings_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="Nouvel email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/darkgreen"
+        android:textColorHint="@color/darkgreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_old_password" />
+
+    <EditText
+        android:id="@+id/editText_settings_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/aladin"
+        android:hint="Nouveaut mot de passe"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/darkgreen"
+        android:textColorHint="@color/darkgreen"
+        app:layout_constraintEnd_toEndOf="@+id/editText_settings_email"
+        app:layout_constraintStart_toStartOf="@+id/editText_settings_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_settings_email" />
+
+    <Button
+        android:id="@+id/btn_update_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/darkgreen"
+        android:fontFamily="@font/aladin"
+        android:text="Enregistrer"
+        app:layout_constraintEnd_toEndOf="@+id/editText_settings_password"
+        app:layout_constraintStart_toStartOf="@+id/editText_settings_password"
+        app:layout_constraintTop_toBottomOf="@+id/editText_settings_password" />
+
+    <TextView
+        android:id="@+id/tv_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/aladin"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:text="Anciennes informations de connexion"
+        app:layout_constraintBottom_toTopOf="@+id/editText_old_email"
+        app:layout_constraintStart_toStartOf="@+id/editText_old_email" />
+
+    <TextView
+        android:id="@+id/tv_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aladin"
+        android:text="Nouvelles informations de connexion"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_settings_email"
+        app:layout_constraintStart_toStartOf="@+id/editText_settings_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_old_password" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Supprimer mon compte"
+        android:backgroundTint="@color/darkgreen"
+        android:fontFamily="@font/aladin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
